@@ -5,10 +5,10 @@ from datetime import timedelta
 st.set_page_config(page_title="行軍計算ツール", layout="centered")
 st.title("行軍計算ツール")
 
-b_travel = st.number_input(input("野獣行軍時間（秒） ", min_value=1, step=1))*2
-r_travel = st.number_input(input("巨獣行軍時間（秒）", min_value=1, step=1))
-sta_num = st.number_input(input("缶詰の数 ", min_value=0, step=1))*10
-use_for_total = st.number_input(input("行軍数 ", min_value=0, step=1))
+b_travel = st.number_input("野獣行軍時間（秒） ", min_value=1, step=1)*2
+r_travel = st.number_input("巨獣行軍時間（秒）", min_value=1, step=1)
+sta_num = st.number_input("缶詰の数 ", min_value=0, step=1)*10
+use_for_total = st.number_input("行軍数 ", min_value=0, step=1)
 val = []
 
 
@@ -52,4 +52,5 @@ if st.button("計算する"):
 
     df = pd.DataFrame(val)
     st.dataframe(df, use_container_width=True)
+
 
