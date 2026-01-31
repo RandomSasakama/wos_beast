@@ -46,12 +46,13 @@ if st.button("計算する"):
         val.append({
             "野獣行軍数": i,
             "巨獣行軍数": use_for_total - i,
-            "総討伐スコア": score,
-            "消費時間": time
+            "ポイント": score,
+            "時間": time
         })
 
-    df = pd.DataFrame(val)
+    df = pd.DataFrame(val, index=False)
     st.dataframe(df, use_container_width=True)
+
 
 
 
