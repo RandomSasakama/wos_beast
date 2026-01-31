@@ -17,7 +17,7 @@ val = []
 
 #1時間の討伐数、体力
 def per_hr(travel_time, use_for, b_r):
-    if travel_time = 0:
+    if travel_time == 0:
         win_num = 0
         use_sta = 0
     if b_r == "b":
@@ -52,6 +52,7 @@ if st.button("計算する"):
 
     df = pd.DataFrame(val)
     st.dataframe(df, use_container_width=True, hide_index=True)
+
 
 
 
