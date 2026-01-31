@@ -2,8 +2,9 @@ import streamlit as st
 import pandas as pd
 from datetime import timedelta
 
-st.set_page_config(page_title="行軍計算ツール", layout="centered")
-st.title("行軍計算ツール")
+st.set_page_config(page_title="討伐pt", layout="centered")
+st.title("討伐計算ツール")
+st.text("野獣・巨獣の平均行軍時間、缶詰の数、使う行軍数を入力してください\n総ポイントと所要時間が出ます")
 
 b_travel = st.number_input("野獣行軍時間（秒） ", min_value=0, step=1)*2
 r_travel = st.number_input("巨獣行軍時間（秒）", min_value=0, step=1)
@@ -52,6 +53,7 @@ if st.button("計算する"):
 
     df = pd.DataFrame(val, index=False)
     st.dataframe(df, use_container_width=True)
+
 
 
 
